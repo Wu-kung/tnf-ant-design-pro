@@ -1,9 +1,9 @@
 import React from 'react';
+import { useTranslation } from 'react-i18next';
 import { InfoCircleOutlined } from '@ant-design/icons';
 import { Area } from '@ant-design/plots';
 import { Card, Col, Row, Table, Tooltip } from 'antd';
 import numeral from 'numeral';
-import useStyles from '@/pages/dashboard.analysis.style';
 import type { DataItem } from '@/types';
 import NumberInfo from './NumberInfo';
 import Trend from './Trend';
@@ -19,21 +19,21 @@ const TopSearch = ({
   dropdownGroup: React.ReactNode;
   searchData: DataItem[];
 }) => {
-  const { styles } = useStyles();
+  const { t } = useTranslation('dashboard');
   const columns = [
     {
-      title: '排名',
+      title: t('ranking'),
       dataIndex: 'index',
       key: 'index',
     },
     {
-      title: '搜索关键词',
+      title: t('keyword'),
       dataIndex: 'keyword',
       key: 'keyword',
       render: (text: React.ReactNode) => <a href="/">{text}</a>,
     },
     {
-      title: '用户数',
+      title: t('userCount'),
       dataIndex: 'count',
       key: 'count',
       sorter: (
@@ -46,7 +46,7 @@ const TopSearch = ({
       ) => a.count - b.count,
     },
     {
-      title: '周涨幅',
+      title: t('weeklyGGrowth'),
       dataIndex: 'range',
       key: 'range',
       sorter: (
@@ -79,7 +79,7 @@ const TopSearch = ({
     <Card
       loading={loading}
       bordered={false}
-      title="线上热门搜索"
+      title={t('onlineHotSearch')}
       extra={dropdownGroup}
       style={{
         height: '100%',
@@ -96,8 +96,8 @@ const TopSearch = ({
           <NumberInfo
             subTitle={
               <span>
-                搜索用户数
-                <Tooltip title="指标说明">
+                {t('searchUserCount')}
+                <Tooltip title={t('indicatorDescription')}>
                   <InfoCircleOutlined
                     style={{
                       marginLeft: 8,
@@ -135,8 +135,8 @@ const TopSearch = ({
           <NumberInfo
             subTitle={
               <span>
-                人均搜索次数
-                <Tooltip title="指标说明">
+                {t('averageSearch')}
+                <Tooltip title={t('indicatorDescription')}>
                   <InfoCircleOutlined
                     style={{
                       marginLeft: 8,

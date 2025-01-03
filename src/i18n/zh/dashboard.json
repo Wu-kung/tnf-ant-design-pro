@@ -18,5 +18,12 @@
   "salesProportion": "销售额类别占比",
   "storeSalesRanking": "门店销售额排名",
   "visitsRanking": "门店访问量排名",
-  "storeName": "工专路 {{number}} 号店"
+  "storeName": "工专路 {{number}} 号店",
+  "onlineHotSearch": "线上热门搜索",
+  "searchUserCount": "搜索用户数",
+  "averageSearch": "人均搜索次数",
+  "ranking": "排名",
+  "keyword": "搜索关键词",
+  "userCount": "用户数",
+  "weeklyGrowth": "周涨幅"
 }

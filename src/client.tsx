@@ -4,7 +4,7 @@ import { Spin } from 'antd';
 import { routeTree } from '../.tnf/routeTree.gen';
 import './i18n/config';
 
-export function createApp() {
+export function createClient() {
   const router = createRouter({
     routeTree,
     defaultPreload: 'intent',

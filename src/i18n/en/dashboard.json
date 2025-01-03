@@ -18,5 +18,12 @@
   "salesProportion": "Sales Proportion",
   "storeSalesRanking": "Store Sales Ranking",
   "visitsRanking": "Visits Ranking",
-  "storeName": "No. {{number}} Gongzhuan Road Store"
+  "storeName": "No. {{number}} Gongzhuan Road Store",
+  "onlineHotSearch": "Online Hot Search",
+  "searchUserCount": "Search User Count",
+  "averageSearch": "Average Search",
+  "ranking": "Ranking",
+  "keyword": "Keyword",
+  "userCount": "User Count",
+  "weeklyGrowth": "Weekly Growth"
 }
